@@ -31,16 +31,12 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     BatGamepadExample* rootVc = [[BatGamepadExample alloc] init];
-    
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    //[self.window addSubview:rootVc.view];
     self.window.rootViewController = rootVc;
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 

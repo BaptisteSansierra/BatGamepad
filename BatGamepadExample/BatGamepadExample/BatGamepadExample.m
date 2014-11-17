@@ -31,7 +31,7 @@
 
 
 @interface BatGamepadExample () <BatGamepadDPadViewCtrlDelegate, BatGamepadButtonViewCtrlDelegate>
-@property(nonatomic, strong) UILabel* title;
+@property(nonatomic, strong) UILabel* gameTitle;
 
 @property(nonatomic, strong) UIView* gameView;
 @property(nonatomic, strong) BatGamepad *gamepad;
@@ -53,10 +53,11 @@
     CGSize mainSize = [self.view bounds].size;
 
     // UI Controllers
-    self.title = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, mainSize.width, 30)];
-    self.title.text = @"My Game";
-    self.title.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:self.title];
+    self.gameTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, mainSize.width, 30)];
+    self.gameTitle.text = @"My Game";
+    self.gameTitle.textAlignment = NSTextAlignmentCenter;
+    self.gameTitle.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:self.gameTitle];
     
     // Game view
     CGSize gameSize = CGSizeMake(mainSize.width, mainSize.height-130);
@@ -135,8 +136,19 @@
     {
         spaceshipLayer.fillColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:1].CGColor;
     }
+    else if(index==2)
+    {
+        spaceshipLayer.fillColor = [UIColor colorWithRed:1 green:1 blue:0 alpha:1].CGColor;
+    }
+    else if(index==3)
+    {
+        spaceshipLayer.fillColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:1].CGColor;
+    }
+    else if(index==4)
+    {
+        spaceshipLayer.fillColor = [UIColor colorWithRed:0 green:1 blue:0 alpha:1].CGColor;
+    }
 }
-
 
 
 #pragma mark Handling idle
