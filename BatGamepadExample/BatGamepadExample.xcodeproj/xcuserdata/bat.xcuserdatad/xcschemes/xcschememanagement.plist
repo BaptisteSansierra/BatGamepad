@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BatGamepad.xcscheme</key>
+		<key>BatGamepadExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4D5FC93E1A19E6B1008D83B9</key>
+		<key>4D5FC96D1A1A172C008D83B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D5FC9491A19E6B1008D83B9</key>
+		<key>4D5FC9861A1A172D008D83B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
