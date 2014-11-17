@@ -10,3 +10,4 @@ s.source_files = "BatGamepad/*.{h,m}"
 s.framework = "CoreGraphics", "UIKit"
 s.requires_arc = true
 end
+
