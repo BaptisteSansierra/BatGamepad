@@ -72,7 +72,6 @@
     {
         return nil;
     }
-    
     // Init vars
     self->m_buttonSize = size;
     self->m_isPushed = NO;

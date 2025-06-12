@@ -25,7 +25,6 @@
 
 #import "UIKit/UIKit.h"
 
-
 CAShapeLayer* createBezierCircle(CGPoint center, float radius, UIColor* color, float lineWidth, BOOL fill)
 {
     CAShapeLayer *circle = [[CAShapeLayer alloc] init];

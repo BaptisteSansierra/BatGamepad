@@ -26,6 +26,5 @@ THE SOFTWARE.
 
 @property (strong, nonatomic) UIWindow *window;
 
-
 @end
 

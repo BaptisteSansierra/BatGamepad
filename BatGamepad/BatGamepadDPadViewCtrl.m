@@ -71,7 +71,6 @@
     {
         return nil;
     }
-    
     // Init vars
     self->m_dPadSize = size;
     self->m_dPadCircleRad = (self->m_dPadSize-2.0)/2.0;
@@ -82,7 +81,6 @@
     self->m_distMinLimit = 0.333;
     return self;
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -110,7 +108,6 @@
     dPadDiscCtrl.opacity = 0.5;
     [dpadDrawView.layer addSublayer:dPadDiscCtrl];
     
-    
     // UIGest
     dPadPanGest = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dPadPan:)];
     dPadPanGest.maximumNumberOfTouches = 1;
@@ -128,7 +125,6 @@
     float originY = m_dPadSize/2.0;
     CGPoint origin = CGPointMake(originX, originY);
     float distLimit = m_dPadCircleRad - m_dPadDiscRad;
-    
     
     if( sender.state == UIGestureRecognizerStateBegan  ||  sender.state == UIGestureRecognizerStateChanged  )
     {
@@ -153,11 +149,9 @@
                 [self.delegate padViewCtr:self didActiveDPad:m_isActive];
             }
         }
-        
         //dPadDiscCtrl.fillColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.25 alpha:1].CGColor;
         dPadDiscCtrl.opacity = 1;
 
-        
         [CATransaction begin];
         [CATransaction setAnimationDuration:0.0];
         //dPadDiscIndic.transform = CATransform3DMakeTranslation(translate.x, translate.y, 0);
@@ -170,9 +164,7 @@
             //dPadDiscIndic.hidden = YES;
         }
         dPadDiscCtrl.transform = CATransform3DMakeTranslation(translate.x, translate.y, 0);
-
         [CATransaction commit];
-        
         
         m_angle = getDPadAngle(origin, translate);
         m_direction = [self getDPadDirectionFromAngle:m_angle];
@@ -219,7 +211,6 @@
     return m_angle;
 }
 
-
 -(BatGamepadDirection) getDPadDirectionFromAngle:(float)alpha
 {
     if( alpha<=M_PI/8 || alpha>15*M_PI/8 )
@@ -256,7 +247,6 @@
     }
     return BatGamepadNoDirection;
 }
-
 
 +(NSString*)directionAsString:(BatGamepadDirection)direction
 {
@@ -295,7 +285,6 @@
     return @"DPadNoDirection";
 }
 
-
 #pragma mark - Drawing utils
 
 -(CAShapeLayer*) createBezierCircle:(CGPoint)center
@@ -324,7 +313,6 @@
     circle.lineWidth = lineWidth;
     return circle;
 }
-
 
 bool circleClampTranslate(const CGPoint origin, CGPoint *translate, float limit)
 {
@@ -366,7 +354,5 @@ float getDPadAngle(const CGPoint origin, const CGPoint translate)
     }
     return alpha;
 }
-
-
 
 @end

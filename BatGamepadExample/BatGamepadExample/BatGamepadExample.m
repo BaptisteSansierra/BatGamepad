@@ -29,7 +29,6 @@
 #define kMaxIdleTimeSeconds 60.0
 #define SIGN(x) (x<0?-1:1)
 
-
 @interface BatGamepadExample () <BatGamepadDPadViewCtrlDelegate, BatGamepadButtonViewCtrlDelegate>
 @property(nonatomic, strong) UILabel* gameTitle;
 
@@ -110,7 +109,6 @@
                                                   repeats:YES];
 }
 
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -149,7 +147,6 @@
         spaceshipLayer.fillColor = [UIColor colorWithRed:0 green:1 blue:0 alpha:1].CGColor;
     }
 }
-
 
 #pragma mark Handling idle
 

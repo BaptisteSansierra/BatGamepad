@@ -148,9 +148,6 @@
         }
         [view addSubview:button4.view];
     }
-    
-    
-    
     return self;
 }
 

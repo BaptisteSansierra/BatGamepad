@@ -32,5 +32,4 @@
 
 CAShapeLayer* createBezierCircle(CGPoint center, float radius, UIColor* color, float lineWidth, BOOL fill);
 
-
 #endif

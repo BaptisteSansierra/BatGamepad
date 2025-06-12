@@ -35,4 +35,5 @@
     BOOL m_isActiveDpad;
     float m_dpadAngle;
 }
+
 @end
